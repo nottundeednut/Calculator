@@ -1,0 +1,55 @@
+/* main {
+  text-align: center;
+  vertical-align: center;
+  line-height: 100vh
+} */
+
+body{
+  background-color: blue;
+}
+
+.wrapper{
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  justify-content: center;
+}
+
+.span{
+  grid-column: span 2;
+}
+
+.result{
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0, .50);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.result .old-input{
+  color: grey;
+  font-size: 1.5rem;
+}
+
+.result .new-input{
+  color: white;
+  font-size: 2.5rem;
+}
+
+.wrapper > button {
+  font-size: 32px;
+  border: 1px solid grey;
+  outline: none;
+  background-color: rgba(255, 255, 255, .20);
+}
+
+.wrapper > button:hover,
+.wrapper > button:focus {
+  background-color: blue;
+}
